@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<template
+    format="1"
+    revision="1"
+    name="Tea Repository Pattern"
+    description="The Repository Pattern to Handle Data Layer">
+
+    <parameter
+    	id="modelName"
+    	name="Model name"
+    	type="string"
+    	constraints="nonempty"
+    	default="User"
+    	help="Enter model name" />
+
+    <parameter
+    	id="packageName"
+    	name="Package name"
+    	type="string"
+    	constraints="package"
+    	default="com.demo.demo"
+    	help="Enter package name" />
+
+    <category value="Tea Framework"/>
+    <formfactor value="Mobile" />
+
+    <globals file="globals.xml.ftl" />
+    <execute file="recipe.xml.ftl" />
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+</template>
