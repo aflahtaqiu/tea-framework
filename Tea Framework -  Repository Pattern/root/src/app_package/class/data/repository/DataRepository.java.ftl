@@ -19,7 +19,7 @@ public class ${modelName}Repository implements I${modelName}DataSource {
             this.localDataSource = localDataSource;
     }
 
-    public static ${modelName}DataRepository getInstance (Context context) {
+    public static ${modelName}Repository getInstance (Context context) {
         if(dataRepository == null) {
             dataRepository = new ${modelName}Repository( new ${modelName}RemoteDataSource(), new ${modelName}LocalDataSource(context));
         }

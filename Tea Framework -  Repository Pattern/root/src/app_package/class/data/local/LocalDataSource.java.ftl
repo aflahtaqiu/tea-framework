@@ -9,7 +9,7 @@ public class ${modelName}LocalDataSource implements I${modelName}DataSource {
 
     private Context context;
 
-    ${modelName}LocalDataSource (Context context) {
+    public ${modelName}LocalDataSource (Context context) {
         this.context = context;
     }
 }
