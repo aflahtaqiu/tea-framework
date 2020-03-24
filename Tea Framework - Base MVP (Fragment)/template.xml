@@ -2,10 +2,10 @@
 <template
     format="1"
     revision="1"
-    name="Tea Base MVP (Fragment)"
+    name="Tea Base MVP Fragment"
     description="Base MVP Tea Framework - Using Fragment">
 
-    <parameter
+	<parameter
         id="folderName"
         name="Folder Name"
         type="string"
@@ -21,7 +21,13 @@
     	default="${underscoreToCamelCase(folderName)}Fragment"
     	help="Fragment name" />
 
-    <parameter
+	<parameter
+		id="isUseDataSource"
+		name="Use Data Source?"
+		type="boolean"
+		default="true"/>
+
+	<parameter
     	id="layoutName"
     	name="Layout Name"
     	type="string"
@@ -30,11 +36,11 @@
     	default="fragment_blank"
     	help="Layout name" />
 
-	<parameter
+    <parameter
     	id="packageName"
     	name="Package name"
     	type="string"
-    	constraints="package.${folderName}"
+    	constraints="package"
     	default="com.demo.demo"
     	help="Enter package name" />
 
@@ -61,5 +67,5 @@
 
     <globals file="globals.xml.ftl" />
     <execute file="recipe.xml.ftl" />
-    
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
 </template>
