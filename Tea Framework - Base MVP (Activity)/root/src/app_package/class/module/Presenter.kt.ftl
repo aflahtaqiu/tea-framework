@@ -17,7 +17,7 @@ class ${presenterClass} : I${presenterClass} {
         <#if isUseDataSource>
         private var dataInjector: IDataInjector? = null
         </#if>
-        private var view: IDemoactivityView? = null
+        private var view: ${viewClass}? = null
 
         fun inject${viewClass}(_view: ${viewClass}?) {
             view = _view

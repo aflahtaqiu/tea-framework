@@ -1,5 +1,7 @@
 package ${escapeKotlinIdentifiers(packageName)}.model;
 
+import ${escapeKotlinIdentifiers(packageName)}.base.DataResponse
+
 
 data class ${modelName}(
 

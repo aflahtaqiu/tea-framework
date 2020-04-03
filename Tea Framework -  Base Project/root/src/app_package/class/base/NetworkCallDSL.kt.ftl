@@ -23,9 +23,9 @@ class CallHandler<RESPONSE : Any, DATA : Any> {
             } catch (e: Throwable) {
                 withContext(Dispatchers.Main) {
                     if (e is HttpException)
-                        result.value = Resource.error(e.message +" | " + " code " + e.response().code(), 0)
+                        result.value = BaseResponse.error(e.message +" | " + " code " + e.response().code(), 0)
                     else
-                        result.value = Resource.error(e.message, 0)
+                        result.value = BaseResponse.error(e.message, 0)
                 }
                 e.printStackTrace()
             }

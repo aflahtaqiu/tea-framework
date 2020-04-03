@@ -49,6 +49,9 @@
 
         <instantiate from="src/app_package/class/base/NetworkCallDSL.kt.ftl"
             to="${escapeXmlAttribute(srcOut)}/base/NetworkCallDSL.kt" />
+
+        <instantiate from="src/app_package/class/base/ListResponse.kt.ftl"
+            to="${escapeXmlAttribute(srcOut)}/base/ListResponse.kt" />
     <#else>
         <instantiate from="src/app_package/class/base/BaseResponse.java.ftl"
             to="${escapeXmlAttribute(srcOut)}/base/BaseResponse.java" />
