@@ -5,15 +5,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import butterknife.ButterKnife;
-import ${packageName}.R;
 import ${packageName}.base.BaseFragment;
+import ${packageName}.databinding.${underscoreToCamelCase(layoutName)}BindingBinding;
 
 
 public class ${activityClass} extends BaseFragment implements ${viewClass} {
     
     private static I${presenterClass} presenter;
     private static ${activityClass} instance;
+
+    private ${underscoreToCamelCase(layoutName)}BindingBinding binding;
 
     public static ${activityClass} getInstance () {
         if(instance == null) {
@@ -29,10 +30,16 @@ public class ${activityClass} extends BaseFragment implements ${viewClass} {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState){
-        View view = inflater.inflate(R.layout.${layoutName}, container, false);
-        ButterKnife.bind(this, view);
+        binding = ${underscoreToCamelCase(layoutName)}BindingBinding.inflate(inflater, container, false);
 
-        return view;
+
+        return binding.getRoot();
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        binding = null;
     }
 
     @Override

@@ -1,11 +1,9 @@
-<#if !generateKotlin>
-    android {
-        compileOptions {
-            sourceCompatibility JavaVersion.VERSION_1_8
-            targetCompatibility JavaVersion.VERSION_1_8
-        }
+
+android {
+    viewBinding {
+        enabled = true
     }
-</#if>
+}
 
 dependencies {
 
@@ -19,16 +17,13 @@ dependencies {
 
         implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
         implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
+        
+    </#if>
 
-    <#else>
-        // Butterknife
-        implementation 'com.jakewharton:butterknife:10.1.0'
-        annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'
-
+    <#if !generateKotlin>
         // Lombok
         compileOnly 'org.projectlombok:lombok:1.18.8'
         annotationProcessor 'org.projectlombok:lombok:1.18.8'
-        
     </#if>
     
     implementation 'com.google.android.material:material:1.1.0'

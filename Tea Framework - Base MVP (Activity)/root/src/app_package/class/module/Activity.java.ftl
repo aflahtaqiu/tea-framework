@@ -2,9 +2,8 @@ package ${packageName}.module.${folderName};
 
 import android.os.Bundle;
 
-import butterknife.ButterKnife;
-import ${packageName}.R;
 import ${packageName}.base.BaseActivity;
+import ${packageName}.databinding.${underscoreToCamelCase(layoutName)}Binding;
 
 
 public class ${activityClass} extends BaseActivity implements ${viewClass} {
@@ -12,12 +11,13 @@ public class ${activityClass} extends BaseActivity implements ${viewClass} {
     private static I${presenterClass} presenter;
     private static ${activityClass} instance;
 
+    private ${underscoreToCamelCase(layoutName)}Binding binding;
+
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.${layoutName});
-        
-        ButterKnife.bind(this);
+        binding = ${underscoreToCamelCase(layoutName)}Binding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
         ${presenterClass}.inject${viewClass}(this);
     }
 
