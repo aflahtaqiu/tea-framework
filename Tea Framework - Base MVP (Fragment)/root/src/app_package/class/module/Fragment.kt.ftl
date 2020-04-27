@@ -29,17 +29,12 @@ class ${activityClass} : BaseFragment() , ${viewClass} {
 
     override fun showMessage(message: String?) {}
 
+    override fun injectPresenter() {
+        presenter!!.injectView(this)
+    }
+
     companion object {
         private var presenter: I${presenterClass}? = null
-        var instance: ${activityClass}? = null
-            get() {
-                if (field == null) {
-                    field = ${activityClass}()
-                }
-                return field
-            }
-            private set
-
         fun injectI${presenterClass}(_presenter: I${presenterClass}?) {
             presenter = _presenter
         }

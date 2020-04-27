@@ -11,7 +11,6 @@ class ${activityClass} : BaseActivity() , ${viewClass} {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.${layoutName})
-        ${presenterClass}.inject${viewClass}(this)
     }
 
     override fun showLoading(message: String?) {
@@ -24,9 +23,12 @@ class ${activityClass} : BaseActivity() , ${viewClass} {
 
     override fun showMessage(message: String?) {}
 
+    override fun injectPresenter() {
+        presenter!!.injectView(this)
+    }
+
     companion object {
         private var presenter: I${presenterClass}? = null
-        private val instance: ${activityClass}? = null
         fun injectI${presenterClass}(_presenter: I${presenterClass}?) {
             presenter = _presenter
         }

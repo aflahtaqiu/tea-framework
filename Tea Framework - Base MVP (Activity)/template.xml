@@ -57,7 +57,7 @@
     	type="string"
     	constraints="class|nonempty|unique"
     	default="MainView"
-    	suggest="I${underscoreToCamelCase(activityClass)}View"
+    	suggest="I${underscoreToCamelCase(folderName)}View"
     	help="View interface name" />
 
 	<parameter
@@ -66,7 +66,7 @@
     	type="string"
     	constraints="class|nonempty|unique"
     	default="MainPresenter"
-    	suggest="${underscoreToCamelCase(activityClass)}Presenter"
+    	suggest="${underscoreToCamelCase(folderName)}Presenter"
     	help="Presenter name" />
 
     <category value="Tea Framework"/>

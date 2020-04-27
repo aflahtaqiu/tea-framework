@@ -1,6 +1,5 @@
 package ${escapeKotlinIdentifiers(packageName)}.module.${folderName}
 
-import ${escapeKotlinIdentifiers(packageName)}.di.DataInjector
 
 class ${underscoreToCamelCase(folderName)}Injector {
 

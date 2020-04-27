@@ -4,6 +4,8 @@ import ${escapeKotlinIdentifiers(packageName)}.di.IDataInjector
 
 class ${presenterClass} : I${presenterClass} {
 
+    private var view: ${viewClass}? = null
+    
     companion object {
         var instance: ${presenterClass}? = null
             get() {
@@ -17,16 +19,14 @@ class ${presenterClass} : I${presenterClass} {
         <#if isUseDataSource>
         private var dataInjector: IDataInjector? = null
         </#if>
-        private var view: ${viewClass}? = null
-
-        fun inject${viewClass}(_view: ${viewClass}?) {
-            view = _view
-        }
-
         <#if isUseDataSource>
             fun setDataInjector(_datInjector: IDataInjector?) {
                 dataInjector = _datInjector
             }   
         </#if>
+    }
+
+    override fun injectView(_view: ${viewClass}) {
+            view = _view
     }
 }

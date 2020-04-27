@@ -1,4 +1,4 @@
-
+aapply plugin: 'androidx.navigation.safeargs'
 android {
     viewBinding {
         enabled = true
@@ -47,4 +47,9 @@ dependencies {
 
     //circular imageview
     implementation 'de.hdodenhof:circleimageview:3.0.0'
+
+    implementation 'androidx.navigation:navigation-fragment:2.2.2'
+    implementation 'androidx.navigation:navigation-ui:2.2.2'
 }
+
+ 

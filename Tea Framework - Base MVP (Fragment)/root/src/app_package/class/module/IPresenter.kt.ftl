@@ -5,5 +5,5 @@ import ${escapeKotlinIdentifiers(packageName)}.base.IBasePresenter
 
 
 interface I${presenterClass} : IBasePresenter {
-
+    fun injectView(_view : ${viewClass})
 }

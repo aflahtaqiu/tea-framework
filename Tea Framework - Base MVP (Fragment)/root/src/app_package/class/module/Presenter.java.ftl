@@ -5,7 +5,7 @@ import ${packageName}.di.IDataInjector;
 
 public class ${presenterClass} implements I${presenterClass} {
 
-    private static ${viewClass} view;
+    private ${viewClass} view;
     private static ${presenterClass} instance;
     <#if isUseDataSource>
         private static IDataInjector dataInjector;
@@ -18,9 +18,11 @@ public class ${presenterClass} implements I${presenterClass} {
         return instance;
     }
 
-    public static void inject${viewClass} (${viewClass} _view) {
-        view = _view;
+    @Override
+    public void injectView(${viewClass} _view) {
+        view =_view;
     }
+
     <#if isUseDataSource>
         public static void setDataInjector(IDataInjector _datInjector) {
             dataInjector = _datInjector;

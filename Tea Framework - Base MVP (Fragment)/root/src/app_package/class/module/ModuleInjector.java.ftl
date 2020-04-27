@@ -18,7 +18,6 @@ public class ${underscoreToCamelCase(folderName)}Injector {
 
     void injectDependency () {
         ${activityClass}.injectI${presenterClass}(${presenterClass}.getInstance());
-        ${presenterClass}.inject${viewClass}(${activityClass}.getInstance());
         
         // TODO: Add your class dependency in this module here
     }

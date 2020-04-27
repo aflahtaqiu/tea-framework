@@ -6,22 +6,15 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import ${packageName}.base.BaseFragment;
-import ${packageName}.databinding.${underscoreToCamelCase(layoutName)}BindingBinding;
+import ${packageName}.databinding.${underscoreToCamelCase(layoutName)}Binding;
 
 
 public class ${activityClass} extends BaseFragment implements ${viewClass} {
     
     private static I${presenterClass} presenter;
-    private static ${activityClass} instance;
 
-    private ${underscoreToCamelCase(layoutName)}BindingBinding binding;
+    private ${underscoreToCamelCase(layoutName)}Binding binding;
 
-    public static ${activityClass} getInstance () {
-        if(instance == null) {
-            instance = new ${activityClass}();
-        }
-        return instance;
-    }
 
     public ${activityClass} () {
         // Fragment Constructor
@@ -30,7 +23,7 @@ public class ${activityClass} extends BaseFragment implements ${viewClass} {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState){
-        binding = ${underscoreToCamelCase(layoutName)}BindingBinding.inflate(inflater, container, false);
+        binding = ${underscoreToCamelCase(layoutName)}Binding.inflate(inflater, container, false);
 
 
         return binding.getRoot();
@@ -55,6 +48,11 @@ public class ${activityClass} extends BaseFragment implements ${viewClass} {
     @Override
     public void showMessage(String message) {
         
+    }
+
+    @Override
+    public void injectPresenter() {
+        presenter.injectView(this);
     }
 
     public static void injectI${presenterClass} (I${presenterClass} _presenter) {

@@ -18,7 +18,6 @@ public class ${activityClass} extends BaseActivity implements ${viewClass} {
         super.onCreate(savedInstanceState);
         binding = ${underscoreToCamelCase(layoutName)}Binding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        ${presenterClass}.inject${viewClass}(this);
     }
 
     @Override
@@ -34,6 +33,11 @@ public class ${activityClass} extends BaseActivity implements ${viewClass} {
     @Override
     public void showMessage(String message) {
         
+    }
+
+    @Override
+    public void injectPresenter() {
+        presenter.injectView(this);
     }
 
     public static void injectI${presenterClass} (I${presenterClass} _presenter) {

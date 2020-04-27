@@ -57,6 +57,8 @@
             to="${escapeXmlAttribute(srcOut)}/base/BaseResponse.java" />
     </#if>
 
+    <instantiate from="src/app_package/navigation/navigation.xml.ftl"
+        to="${escapeXmlAttribute(resOut)}/navigation/main_navigation.xml" />
 
     <merge from="src/app_package/build.gradle.ftl"
             to="${escapeXmlAttribute(projectOut)}/build.gradle" />

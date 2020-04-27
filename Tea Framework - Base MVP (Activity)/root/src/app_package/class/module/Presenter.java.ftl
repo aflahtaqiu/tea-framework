@@ -17,8 +17,9 @@ public class ${presenterClass} implements I${presenterClass} {
         return instance;
     }
 
-    public static void inject${viewClass} (${viewClass} _view) {
-        view = _view;
+    @Override
+    public void injectView(${viewClass} _view) {
+        view =_view;
     }
     
     <#if isUseDataSource>
