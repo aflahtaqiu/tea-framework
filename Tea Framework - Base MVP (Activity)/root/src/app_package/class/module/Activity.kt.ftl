@@ -11,6 +11,7 @@ class ${activityClass} : BaseActivity() , ${viewClass} {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.${layoutName})
+        injectPresenter()
     }
 
     override fun showLoading(message: String?) {

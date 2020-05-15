@@ -16,6 +16,9 @@ class ${activityClass} : BaseFragment() , ${viewClass} {
         savedInstanceState: Bundle?
     ): View {
         val view: View = inflater.inflate(R.layout.${layoutName}, container, false)
+        
+        injectPresenter()
+        
         return view
     }
 

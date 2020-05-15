@@ -18,6 +18,7 @@ public class ${activityClass} extends BaseActivity implements ${viewClass} {
         super.onCreate(savedInstanceState);
         binding = ${underscoreToCamelCase(layoutName)}Binding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        injectPresenter();
     }
 
     @Override

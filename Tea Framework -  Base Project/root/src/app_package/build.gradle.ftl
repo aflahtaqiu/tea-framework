@@ -1,4 +1,4 @@
-aapply plugin: 'androidx.navigation.safeargs'
+<#--  aapply plugin: 'androidx.navigation.safeargs'  -->
 android {
     viewBinding {
         enabled = true

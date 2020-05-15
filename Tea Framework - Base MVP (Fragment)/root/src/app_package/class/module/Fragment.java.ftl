@@ -25,7 +25,7 @@ public class ${activityClass} extends BaseFragment implements ${viewClass} {
                              Bundle savedInstanceState){
         binding = ${underscoreToCamelCase(layoutName)}Binding.inflate(inflater, container, false);
 
-
+        injectPresenter();
         return binding.getRoot();
     }
 
